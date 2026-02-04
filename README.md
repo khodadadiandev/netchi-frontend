@@ -1,16 +1,77 @@
-# React + Vite
+ ویژگی‌های اصلی
+صفحه اصلی: نمایش خدمات برتر و ویژگی‌های پلتفرم
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+صفحه خدمات: فیلتر و جستجوی پیشرفته خدمات
 
-Currently, two official plugins are available:
+جزئیات خدمت: نمایش کامل اطلاعات هر خدمت
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+سیستم سبد خرید: افزودن خدمات به سبد خرید
 
-## React Compiler
+احراز هویت کاربران: ورود و ثبت‌نام
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+پنل کاربری: مدیریت پروفایل و سفارشات
 
-## Expanding the ESLint configuration
+پرداخت آنلاین: درگاه پرداخت امن
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🛠️ تکنولوژی‌های استفاده شده
+Frontend
+React 18 - کتابخانه اصلی رابط کاربری
+
+Vite - Build tool و dev server
+
+React Router DOM - مدیریت مسیرها
+
+Tailwind CSS - استایل‌دهی
+
+Lucide React - آیکون‌ها
+
+Framer Motion - انیمیشن‌ها
+
+Axios - درخواست‌های HTTP
+
+React Hook Form - مدیریت فرم‌ها
+
+Zod - اعتبارسنجی فرم‌ها
+
+State Management
+React Context API - مدیریت وضعیت گلوبال
+
+Custom Hooks - هوک‌های اختصاصی
+
+📁 ساختار پروژه
+
+netchi-frontend/
+├── public/                    # فایل‌های استاتیک
+│   ├── images/               # تصاویر
+│   │   └──                   # تصاویر خدمات
+│   └── index.html            # فایل اصلی HTML
+├── src/                      # کد منبع
+│   ├── components/           # کامپوننت‌ها
+│   │   ├── auth/            # کامپوننت‌های احراز هویت
+│   │   ├── common/          # کامپوننت‌های عمومی
+│   │   ├── services/        # کامپوننت‌های خدمات
+│   │   └── layout/          # کامپوننت‌های چیدمان
+│   ├── context/             # Context providers
+│   │   ├── AuthContext.jsx  # مدیریت احراز هویت
+│   │   └── CartContext.jsx  # مدیریت سبد خرید
+│   ├── hooks/               # Custom hooks
+│   │   ├── useAuth.js       # هوک احراز هویت
+│   │   └── useServices.js   # هوک مدیریت خدمات
+│   ├── pages/               # صفحات اصلی
+│   │   ├── HomePage.jsx     # صفحه اصلی
+│   │   ├── ServicesPage.jsx # صفحه خدمات
+│   │   ├── LoginPage.jsx    # صفحه ورود
+│   │   ├── RegisterPage.jsx # صفحه ثبت‌نام
+│   │   ├── CartPage.jsx     # صفحه سبد خرید
+│   │   ├── CheckoutPage.jsx # صفحه پرداخت
+│   │   └── ProfilePage.jsx  # صفحه پروفایل
+│   ├── utils/               # ابزارهای کمکی
+│   │   ├── api.js          # تنظیمات API
+│   │   ├── constants.jsx   # داده‌های ثابت
+│   │   └── helpers.js      # توابع کمکی
+│   ├── App.jsx             # کامپوننت اصلی
+│   └── main.jsx            # نقطه ورود
+├── package.json            # تنظیمات npm
+├── vite.config.js          # تنظیمات Vite
+├── postcss.config.js       # تنظیمات PostCSS
+└── README.md               # این فایل
